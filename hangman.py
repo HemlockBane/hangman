@@ -24,6 +24,10 @@ for i in range(8, 0, -1):
     if user_guess not in selected_word:
         print("No such letter in the word")
     else:
+        # Remember strings are immutable, so we need to convert the masked word to 
+        # a list of characters so that we can easily (there are other ways sha) replace characters at specific indices
+        # We can use replace either because all the characters are dashes ('-'). Doing this
+        # will just affect all the dashes
         char_list = list(masked_text)
         for index, value in enumerate(masked_text):
             if user_guess == selected_word[index]:
