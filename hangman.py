@@ -1,9 +1,3 @@
-# Print "Type "play" to play the game, "exit" to quit:" when game starts
-# - Start game if user types "play"
-# - Do nothing if user types "exit"
-# - Print message again if user types anything else
-# Print "Type "play" to play the game, "exit" to quit:" when game end
-
 import random as r
 
 
@@ -17,7 +11,6 @@ def play_game():
 
     masked_text = len(selected_word) * '-'
 
-    # print(selected_word)
     print("H A N G M A N")
     print("")
     remaining_lives = 8
@@ -58,7 +51,7 @@ def play_game():
 
         else:
             char_list = list(masked_text)
-            for index, value in enumerate(masked_text):
+            for index, _ in enumerate(masked_text):
                 if guessed_letter == selected_word[index]:
                     char_list[index] = guessed_letter
             masked_text = "".join(char_list)
